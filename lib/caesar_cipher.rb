@@ -45,10 +45,11 @@ def input
   arr.push(gets.chomp)
   puts "Please give the encryption key (a natural number) :"
   num = gets.chomp.to_i
-  while num <= 0 do
-    puts "Sorry, I admit only natural number (> 0). Please, try again: "
+  while(num < 0 || num > 26) do
+    puts "Sorry, I admit only natural number between 0 and 25. Please, try again: "
     num = gets.chomp.to_i
   end
+  num =
   arr.push(num)
   return arr
 end
@@ -79,7 +80,8 @@ def caesar_cipher(str,num)
 end
 
 # collect inputs (text and the encryption key)
-#ar = input
-#str = ar[0]
-#num = ar[1]
-#caesar_cipher(str,num)
+# ar = input
+# str = ar[0]
+# num = ar[1]
+
+# caesar_cipher(str,num)
